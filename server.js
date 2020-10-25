@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
 
-app.use(express.static('./dist/<angular-heroku.json>'));
+app.use(express.static('./dist/angular-heroku/'));
 
 app.get('/*', function(req, res) {
-    res.sendFile('index.html', {root: 'dist/<angular-heroku.json>/'}
+    res.sendFile('index.html', {root: 'dist/angular-heroku/'}
   );
 });
 
